@@ -1,0 +1,44 @@
+api-gateway:
+http://localhost:8765/pensioner-detail-service/pensionerDetailByAadhaar/123456789012
+
+
+auth : http://localhost:8081
+
+
+post mapping:
+http://localhost:8081/login
+
+get mapping:
+http://localhost:8081/validate
+http://localhost:8081/statusCheck
+
+db:localhost:8081/h2-console
+
+pensioner details:http://localhost:8083
+
+get mapping:
+http://localhost:8083/pensionerDetailByAadhaar/123456789012
+
+disbursment:http://localhost:8084
+
+getmapping:
+http://localhost:8084/HealthCheck
+
+postmapping:
+http://localhost:8084/DisbursePension
+
+@FeignClient("AUTH-SERVICE") -> validate
+@FeignClient("PENSIONER-DETAIL-SERVICE")
+
+process:http://localhost:8082
+
+postmapping:
+http://localhost:8082/pensionerInput
+http://localhost:8082/processPension
+
+@FeignClient("AUTH-SERVICE")
+@FeignClient("PENSION-DISBURSEMENT-SERVICE")
+@FeignClient("PENSIONER-DETAIL-SERVICE")
+
+
+db:8082/h2-console

@@ -1,0 +1,10 @@
+.container-body{
+    background-image: url("../../../assets/images/1.jpg");
+    height: 520px; 
+    color: rgb(236, 244, 238);  
+    background-size: contain;
+    background-position: 50%; 
+    margin-bottom: 20px; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
