@@ -8,9 +8,9 @@ phases:
     - echo Logging in to Amazon ECR...
     - aws --version
     - aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 274201610284.dkr.ecr.eu-west-2.amazonaws.com
-    - IMAGE_NAME=authorization-service
-    - IMAGE_URI=274201610284.dkr.ecr.eu-west-2.amazonaws.com/authorization-service:latest
-    - CONTAINER_NAME=authorization-service
+    - IMAGE_NAME=divyesh_911581_pms
+    - IMAGE_URI=docker push 274201610284.dkr.ecr.eu-west-2.amazonaws.com/divyesh_911581_pms:latest
+    - CONTAINER_NAME=divyesh_911581_pms
   build:
     commands:
     - echo Build started on `date`
